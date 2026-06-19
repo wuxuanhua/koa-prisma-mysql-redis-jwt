@@ -303,6 +303,75 @@ NODE_ENV=production node dist/app.js
 pm2 start dist/app.js --name koa-server
 ```
 
+## Git 操作
+
+```bash
+# 克隆仓库
+git clone https://github.com/wuxuanhua/koa-prisma-mysql-redis-jwt.git
+cd koa-prisma-mysql-redis-jwt
+
+# 查看状态
+git status
+
+# 查看提交历史
+git log --oneline
+
+# 拉取最新代码
+git pull
+
+# 添加修改到暂存区
+git add .                    # 添加所有修改
+git add src/                 # 添加指定目录
+git add package.json         # 添加指定文件
+
+# 提交修改
+git commit -m "feat: 描述你的修改"
+
+# 推送到远程仓库
+git push
+
+# 分支操作
+git branch                   # 查看本地分支
+git branch -a                # 查看所有分支（含远程）
+git branch feature/xxx       # 创建新分支
+git checkout feature/xxx     # 切换到指定分支
+git checkout -b feature/xxx  # 创建并切换到新分支
+
+# 合并分支（在目标分支上执行）
+git merge feature/xxx
+
+# 删除分支
+git branch -d feature/xxx    # 删除本地分支
+git push origin -d feature/xxx  # 删除远程分支
+
+# 撤销操作
+git reset HEAD <file>        # 取消暂存
+git checkout -- <file>       # 撤销文件修改
+git reset --soft HEAD~1      # 撤销最后一次 commit（保留修改）
+```
+
+### 提交信息规范
+
+推荐使用 [Conventional Commits](https://www.conventionalcommits.org/) 格式：
+
+| 类型 | 说明 |
+|------|------|
+| `feat` | 新功能 |
+| `fix` | 修复 Bug |
+| `docs` | 文档更新 |
+| `style` | 代码格式（不影响逻辑） |
+| `refactor` | 重构 |
+| `perf` | 性能优化 |
+| `test` | 测试相关 |
+| `chore` | 构建/工具/依赖等 |
+
+**示例：**
+```bash
+git commit -m "feat: 添加用户登录接口"
+git commit -m "fix: 修复 JWT token 过期判断"
+git commit -m "docs: 更新 API 文档"
+```
+
 ## 脚本速查
 
 | 命令 | 说明 |
