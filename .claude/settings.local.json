@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(openspec init *)",
+      "Bash(pnpm -v)",
+      "Bash(pnpm init *)",
+      "Bash(pnpm add *)",
+      "Bash(pnpm approve-builds *)",
+      "Bash(echo '{\"pnpm\":{\"onlyBuiltDependencies\":[\"@prisma/engines\",\"prisma\",\"esbuild\"]}}')",
+      "Bash(node -e ' *)",
+      "Bash(pnpm install *)",
+      "Bash(npx prisma *)",
+      "Bash(npx tsx *)",
+      "Bash(curl -s http://localhost:3000/api/user)",
+      "WebFetch(domain:www.prisma.io)",
+      "Bash(pnpm remove *)"
+    ]
+  }
+}

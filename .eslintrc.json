@@ -1,0 +1,30 @@
+{
+  "env": {
+    "node": true,
+    "es2022": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": ["eslint:recommended"],
+  "parserOptions": {
+    "ecmaVersion": 2022,
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-var": "error",
+    "prefer-const": "error",
+    "semi": ["error", "always"],
+    "quotes": ["error", "single", { "avoidEscape": true, "allowTemplateLiterals": true }],
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "no-tabs": "error",
+    "comma-dangle": ["error", "always-multiline"],
+    "arrow-parens": ["error", "as-needed"],
+    "no-unused-vars": "warn",
+    "no-console": "warn",
+    "eqeqeq": ["error", "always"],
+    "curly": ["error", "all"],
+    "no-throw-literal": "error",
+    "prefer-template": "error",
+    "no-return-await": "error"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "name": "koa-prisma-mysql-redis-jwt",
+  "version": "1.0.0",
+  "description": "Koa2 + Prisma + MySQL + Redis + JWT 后端服务",
+  "main": "src/app.ts",
+  "scripts": {
+    "dev": "tsx watch src/app.ts",
+    "build": "tsc",
+    "start": "node dist/app.js",
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push",
+    "db:migrate": "prisma migrate dev",
+    "db:seed": "tsx prisma/seed.ts",
+    "lint": "eslint src --ext .ts",
+    "format": "prettier --write 'src/**/*.ts'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.33.0",
+  "dependencies": {
+    "@koa/router": "^15.6.0",
+    "@prisma/client": "^6.19.3",
+    "dotenv": "^17.4.2",
+    "ioredis": "^5.11.0",
+    "jsonwebtoken": "^9.0.3",
+    "koa": "^3.2.1",
+    "koa-body": "^8.0.0",
+    "koa-json": "^2.0.2",
+    "winston": "^3.19.0"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/koa": "^3.0.3",
+    "@types/koa__router": "^12.0.5",
+    "@types/node": "^25.9.1",
+    "eslint": "^10.4.1",
+    "prettier": "^3.8.3",
+    "prisma": "^6.19.3",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@prisma/engines",
+      "@prisma/client",
+      "prisma",
+      "esbuild"
+    ]
+  }
+}
